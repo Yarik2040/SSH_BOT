@@ -1,0 +1,10 @@
+FROM postgres:latest
+
+COPY ./init.sh /docker-entrypoint-initdb.d/
+
+ARG DB_REPL_USER
+ARG DB_REPL_PASSWORD
+
+ENV PGUSER=repl_user
+ENV PGPASSWORD=Qq12345
+ENV POSTGRES_PASSWORD=Qq12345
